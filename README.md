@@ -1,7 +1,7 @@
 c1000k
 ======
 
-This is the TCP server-client suit to help you to test if your OS supports c1000k(1 million connections).
+This is the TCP server-client suit to help you test if your OS supports c1000k(1 million connections).
 
 ## Usage
 
