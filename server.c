@@ -28,7 +28,7 @@ int main(int argc, char **argv){
 	socklen_t optlen;
 	int connections = 0;
 	int base_port = 7000;
-	if(argc > 2){
+	if(argc >= 2){
 		base_port = atoi(argv[1]);
 	}
 
@@ -110,5 +110,3 @@ sock_err:
 	printf("error: %s\n", strerror(errno));
 	return 0;
 }
-
-
