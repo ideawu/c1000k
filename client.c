@@ -28,7 +28,7 @@ int main(int argc, char **argv){
 	socklen_t optlen;
 	int connections = 0;
 
-	bzero(&addr, sizeof(addr));
+	memset(&addr, sizeof(addr), 0);
 	addr.sin_family = AF_INET;
 	inet_pton(AF_INET, ip, &addr.sin_addr);
 

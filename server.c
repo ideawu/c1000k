@@ -34,9 +34,11 @@ int main(int argc, char **argv){
 
 	int server_socks[MAX_PORTS];
 
-	for(int i=0; i<MAX_PORTS; i++){
-		int port = base_port + i;
-		bzero(&addr, sizeof(addr));
+	int i;
+	int port;
+	for(i=0; i<MAX_PORTS; i++){
+		port = base_port + i;
+		memset(&addr, sizeof(addr), 0);
 		addr.sin_family = AF_INET;
 		addr.sin_port = htons((short)port);
 		inet_pton(AF_INET, ip, &addr.sin_addr);
