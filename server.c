@@ -38,7 +38,7 @@ int main(int argc, char **argv){
 	int port;
 	for(i=0; i<MAX_PORTS; i++){
 		port = base_port + i;
-		memset(&addr, sizeof(addr), 0);
+		memset(&addr, 0, sizeof(addr));
 		addr.sin_family = AF_INET;
 		addr.sin_port = htons((short)port);
 		inet_pton(AF_INET, ip, &addr.sin_addr);
